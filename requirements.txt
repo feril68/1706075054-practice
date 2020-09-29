@@ -1,1 +1,6 @@
-Cactus==3.3.3
+asgiref
+Django
+pytz
+sqlparse
+urllib3
+Cactus
