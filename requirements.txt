@@ -3,4 +3,3 @@ Django
 pytz
 sqlparse
 urllib3
-Cactus
