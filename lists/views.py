@@ -1,16 +1,11 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from random import randint
-from .models import Item
+
 # Create your views here.
 def home_page(request):
-    if request.method == 'POST':
-        Item.objects.create(text=request.POST['item_text'])
-        return redirect('/')
-
     context = {
-        "lucky_number":get_lucky_number(),
-        'items': Item.objects.all()
+        "lucky_number":get_lucky_number()
     }
     return render(request, 'home.html', context=context)
 
